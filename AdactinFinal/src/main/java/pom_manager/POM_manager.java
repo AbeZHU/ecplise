@@ -3,6 +3,7 @@ package pom_manager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import com_POM.POM_bookahotel;
 import com_POM.POM_bookeditinarary;
 import com_POM.POM_bookingconfirm;
 import com_POM.POM_forgotpassword;
@@ -22,9 +23,19 @@ public class POM_manager {
 	private POM_bookeditinarary itin;
 	private POM_bookingconfirm confirmBooking;
 	private POM_logoutpage logout;
+	private POM_bookahotel bookhotel;
+
+	
+
 
 	public POM_manager(WebDriver driver2) {
+		this.driver = driver2;
 		PageFactory.initElements(driver2, this);
+	}
+	
+	public POM_bookahotel getBookhotel() {
+		bookhotel = new POM_bookahotel(driver);
+		return bookhotel;
 	}
 
 	public POM_bookeditinarary getItin() {

@@ -309,9 +309,9 @@ public class BaseClass_com {
 		System.out.println(text);
 	}
 
-	public static void sendKeys(WebElement element, String keys) {
+	public static void sendKeys(WebElement element, String value) {
 
-		element.sendKeys(keys);
+		element.sendKeys(value);
 	}
 
 	public static void click(WebElement element) {

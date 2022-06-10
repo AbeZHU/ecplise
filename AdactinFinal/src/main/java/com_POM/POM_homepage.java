@@ -17,7 +17,7 @@ public class POM_homepage {
 
 	@FindBy(xpath = "//a[text()='New User Register Here']")
 	private WebElement newRegister;
-	@FindBy(id = "username")
+	@FindBy(xpath = "(//input[@class='login_input'])[1]")
 	private WebElement username;
 	@FindBy(id = "password")
 	private WebElement password;
