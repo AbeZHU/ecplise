@@ -35,6 +35,7 @@ public class BaseClass_com {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + ("\\driver\\chromedriver.exe"));
 			driver = new ChromeDriver();
+			
 		}
 
 		else if (browserName.equalsIgnoreCase("edge")) {
