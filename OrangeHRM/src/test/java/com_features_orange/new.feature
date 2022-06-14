@@ -24,5 +24,4 @@ Feature: Integration test of OrangeHRM (login > add employee > read that specifi
   	Given user clicks on employee list on PIM dropdown
   	And user is in employee list page
   	When user enters the details on search fields
-  	And user clicks on recently added employee
   	Then validate the information given there

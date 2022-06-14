@@ -46,6 +46,10 @@ public class BaseClass {
 	public static int ssCount;
 	public static int ssElementCount;
 	public static WebElement relativeElement;
+	public static String value1;
+	public static String value2;
+	public static int xpos;
+	public static int ypos;
 
 	// test:passed
 	public static WebDriver openB(String browserName) {
@@ -607,6 +611,34 @@ public class BaseClass {
 		element.get(value).click();
 	}
 	
+	public static void moveTo(WebElement element) {
+		Actions ac = new Actions(driver);
+		ac.moveToElement(element).perform();
+	}
 	
+	public static void getValue(WebElement element) {
+		value1 = element.getAttribute("value");
+	}
+	
+	public static void getValue2(WebElement element) {
+		value2 = element.getAttribute("value");
+	}
+	
+	public static void validateValues(String value, String valuex) {
+		if(value==valuex) {
+			System.out.println("conditions are met");
+		}
+	}
 
+	public static void relative(WebElement element) {
+		Actions ac = new Actions(driver);
+		ac.moveToElement(element, 40, 542);
+		ac.click().perform();
+	}
+	
+	public static void getposition(WebElement element) {
+		xpos = element.getLocation().getX();
+		ypos = element.getLocation().getY();
+		System.out.println(xpos+"/n"+ypos);
+	}
 }

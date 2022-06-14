@@ -14,7 +14,7 @@ public class POM_homepage {
 	
 	@FindBy(xpath="(//a[contains(@id,'Pim')])[1]")
 	private WebElement menu_PIM;
-	@FindBy(xpath="//a[contains(text(),' Emplo')]")
+	@FindBy(xpath="//a[contains(@id,'addEm')]")
 	private WebElement dd_AddEmployee;
 	public WebElement getMenu_PIM() {
 		return menu_PIM;

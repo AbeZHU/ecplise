@@ -17,6 +17,25 @@ public class POM_employeelistpage {
 	private WebElement txt_employeeid;
 	@FindBy(xpath="//input[@id='searchBtn']")
 	private WebElement btn_search;
+	@FindBy (xpath="//input[@id='btnDelete']")
+	private WebElement delete_btn;
+	@FindBy(xpath="//input[@id='dialogDeleteBtn']")
+	private WebElement ok_btn;
+	public WebElement getOk_btn() {
+		return ok_btn;
+	}
+	
+	public WebElement getDelete_btn() {
+		return delete_btn;
+	}
+	
+	@FindBy(xpath="(//input[@type='checkbox'])[1]")
+	private WebElement checkbox;
+
+	public WebElement getCheckbox() {
+		return checkbox;
+	}
+	
 	//@FindBy(xpath="//a[contains(text(),'"+x+"')]")
 	private WebElement employeeAnalyse;
 
