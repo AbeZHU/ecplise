@@ -5,7 +5,7 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 
 import baseclass_com.BaseClass_com;
-import com_runner_1.Runner;
+import com_runner_1.Runner_com;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.And;
@@ -16,7 +16,7 @@ import pom_manager.POM_manager;
 import property_file.PropertiesRead;
 
 public class StepDefinition1 {
-	public static WebDriver driver = Runner.driver;
+	public static WebDriver driver = Runner_com.driver;
 	public static POM_manager man = new POM_manager(driver);
 	public static BaseClass_com bc = new BaseClass_com();
 	  PropertiesRead prop = new PropertiesRead();

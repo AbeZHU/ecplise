@@ -12,7 +12,7 @@ import baseclass_com.BaseClass_com;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(dryRun = false,features = "src\\test\\java\\multi_feature",glue = "com_multi_stepdefinition", monochrome=true)
-public class Runner {
+public class Runner_com {
 	public static WebDriver driver;
 	
 	@BeforeClass
