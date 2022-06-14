@@ -1,24 +1,23 @@
 package property_file;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Properties;
 
 public class PropertiesRead {
 	public static FileInputStream file;
 	public static Properties prop = new Properties();
 
-	public static void main(String[] args) {
-		PropertiesRead n = new PropertiesRead();
-		readProperties();
-		System.out.println(n.getUserName());
-	}
-
-	public static void readProperties() {
+	public static void PropertiesRead() {
 		try {
 			file = new FileInputStream("src\\main\\java\\property_file\\prop.properties");
 			prop.load(file);
 
 		} catch (Exception e) {
+			e.getCause();
 			e.printStackTrace();
 		}
 	}
@@ -108,4 +107,23 @@ public class PropertiesRead {
 		return prop.getProperty("cvvnumber");
 	}
 
+	public static void writeFile() {
+		try {
+			OutputStream out = new FileOutputStream(
+					"C:\\Users\\noone\\git\\ecplise\\multi_feature\\src\\main\\java\\property_file\\kk.properties");
+			prop.setProperty("maximum", "overdriver");
+			prop.store(out, null);
+
+		} catch (FileNotFoundException e) {
+			e.getCause();
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		writeFile();
+	}
 }

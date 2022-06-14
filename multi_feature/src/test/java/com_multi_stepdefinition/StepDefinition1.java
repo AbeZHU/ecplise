@@ -14,16 +14,18 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pom_manager.POM_manager;
 import property_file.PropertiesRead;
+
 public class StepDefinition1 {
 	public static WebDriver driver = Runner.driver;
 	public static POM_manager man = new POM_manager(driver);
 	public static BaseClass_com bc = new BaseClass_com();
-	public static PropertiesRead prop = new PropertiesRead();
-	
+	  PropertiesRead prop = new PropertiesRead();
+
 	@BeforeStep
 	public void readprop() {
-		prop.readProperties();
+		prop.PropertiesRead();
 	}
+
 	@Given("user is in home page")
 	public void user_is_in_home_page() {
 		bc.get(prop.getHomeUrl());
@@ -53,14 +55,14 @@ public class StepDefinition1 {
 	@When("user enters the needed fields of the search")
 	public void user_enters_the_needed_fields_of_the_search() {
 		bc.dropdown(man.getHotelsearch().getEnterLocation(), prop.getLocation());
-		bc.dropdown(man.getHotelsearch().getEnterHotel(),prop.getHotel() );
+		bc.dropdown(man.getHotelsearch().getEnterHotel(), prop.getHotel());
 		bc.dropdown(man.getHotelsearch().getSelectRoom(), prop.getRoomType());
 		bc.dropdown(man.getHotelsearch().getRoomNo(), prop.getRoomNo());
 		bc.sendKeys(man.getHotelsearch().getCheckInDate(), prop.getCheckIn());
 		bc.sendKeys(man.getHotelsearch().getCheckOutDate(), prop.getCheckOut());
 		bc.dropdown(man.getHotelsearch().getNoOfAdults(), prop.getNoAdults());
-		bc.dropdown( man.getHotelsearch().getNoOfChild(),prop.getNoChild());
-		}
+		bc.dropdown(man.getHotelsearch().getNoOfChild(), prop.getNoChild());
+	}
 
 	@And("user clciks submits")
 	public void user_clciks_submits() {
@@ -116,7 +118,7 @@ public class StepDefinition1 {
 
 	@Then("user is navigated to Conformation page")
 	public void user_is_navigated_to_conformation_page() {
-	man.getConfirm().getMy_itinerary().isDisplayed();
+		man.getConfirm().getMy_itinerary().isDisplayed();
 	}
 
 	@Given("user need to log out")
