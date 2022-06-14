@@ -19,6 +19,7 @@ public class Orange_runner {
 	public static void getBrowser() {
 		driver=BaseClass.openB("chrome");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
 
 }
