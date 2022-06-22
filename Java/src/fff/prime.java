@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class prime {
 	static boolean op = true;
-	static Scanner sc = new Scanner(System.in);
+	static Scanner scS = new Scanner(System.in);
 	public static void main(String[] args) {
-		int x = sc.nextInt();
+		int x = scS.nextInt();
  
 		for(int i = 2; i<x-1;i++) {
 			if(x%i==0) {
