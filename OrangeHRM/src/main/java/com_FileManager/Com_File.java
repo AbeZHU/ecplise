@@ -3,14 +3,14 @@ package com_FileManager;
 import com_properties.Addemployee_config;
 import com_properties.Login_config;
 
-public class Com_filemanager {
+public class Com_File {
 
-	private Com_filemanager() {
+	private Com_File() {
 	
 }
 
-	public static Com_filemanager getInstance() {
-		Com_filemanager manage = new Com_filemanager();
+	public static Com_File manager() {
+		Com_File manage = new Com_File();
 		return manage;
 	}
 

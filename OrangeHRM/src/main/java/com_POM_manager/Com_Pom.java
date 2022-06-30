@@ -9,7 +9,7 @@ import com_POMs.POM_homepage;
 import com_POMs.POM_loginpage;
 import com_POMs.POM_personaldetailspage;
 
-public class Pom_manager {
+public class Com_Pom {
 	public static WebDriver driver;
 	private POM_addemployee addemp;
 	private POM_employeelistpage emplist;
@@ -23,14 +23,14 @@ public class Pom_manager {
 	
 	
 	
-	private Pom_manager(WebDriver driver2) {
+	private Com_Pom(WebDriver driver2) {
 		this.driver =driver2;
 		PageFactory.initElements(driver2, this);
 	}
 
-	public static Pom_manager manage() {
+	public static Com_Pom manager() {
 		
-		Pom_manager pom = new Pom_manager(driver);
+		Com_Pom pom = new Com_Pom(driver);
 		return pom;
 	}
 

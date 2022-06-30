@@ -6,8 +6,8 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import com_POM_manager.Pom_manager;
-import com_baseclass.BaseClass;
+import com_POM_manager.Com_Pom;
+import com_baseclass.Class_Base;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
@@ -18,10 +18,10 @@ public class Orange_runner {
 	public static WebDriver driver;
 	@BeforeClass
 	public static void getBrowser() {
-		driver=BaseClass.openB("chrome");
+		driver=Class_Base.openB("chrome");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		Pom_manager.driver = driver;
+		Com_Pom.driver = driver;
 }
 
 }

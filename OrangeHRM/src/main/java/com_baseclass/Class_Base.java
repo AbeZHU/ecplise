@@ -36,7 +36,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseClass {
+public class Class_Base {
 
 	public static WebDriver driver;
 	public static String title; // static variable to access in any methods
@@ -51,12 +51,12 @@ public class BaseClass {
 	public static int xpos;
 	public static int ypos;
 	
-	private BaseClass() {
+	private Class_Base() {
 		
 	}
 	 
-	public static  BaseClass functionModifier(){
-		BaseClass bc = new BaseClass();
+	public static  Class_Base manager(){
+		Class_Base bc = new Class_Base();
 		return bc;
 	}
 
