@@ -21,7 +21,7 @@ public class Orange_runner {
 		driver=BaseClass.openB("chrome");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		Pom_manager.driver = Orange_runner.driver;
+		Pom_manager.driver = driver;
 }
 
 }
