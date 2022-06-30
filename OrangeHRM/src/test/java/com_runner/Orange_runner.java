@@ -6,6 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+import com_POM_manager.Manager_pom;
 import com_baseclass.BaseClass;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -20,6 +21,7 @@ public class Orange_runner {
 		driver=BaseClass.openB("chrome");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-	}
+		Manager_pom.driver = Orange_runner.driver;
+}
 
 }

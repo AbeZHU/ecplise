@@ -50,8 +50,16 @@ public class BaseClass {
 	public static String value2;
 	public static int xpos;
 	public static int ypos;
+	
+	private BaseClass() {
+		
+	}
+	 
+	public static  BaseClass functionModifier(){
+		BaseClass bc = new BaseClass();
+		return bc;
+	}
 
-	// test:passed
 	public static WebDriver openB(String browserName) {
 		try {
 			// WebDriver gets the value of the given driver

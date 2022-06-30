@@ -17,10 +17,28 @@ public class Manager_pom {
 	private POM_loginpage loginpg;
 	private POM_personaldetailspage perdetails;
 	
-	public Manager_pom(WebDriver driver2) {
+	
+	
+	
+	
+	
+	
+	private Manager_pom(WebDriver driver2) {
 		this.driver =driver2;
 		PageFactory.initElements(driver2, this);
 	}
+
+	public static Manager_pom manage() {
+		
+		Manager_pom pom = new Manager_pom(driver);
+		return pom;
+	}
+
+	
+	
+	
+	
+	
 	public POM_addemployee getAddemp() {
 		addemp = new POM_addemployee(driver);
 		return addemp;
